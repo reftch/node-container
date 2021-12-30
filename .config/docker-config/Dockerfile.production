@@ -1,0 +1,15 @@
+ARG TAG=16-alpine
+
+FROM node:$TAG
+                                                                                                                                                                                                                                                                                    
+WORKDIR /app
+                                                                                                                                                                                                                                                                                    
+# Clean out directories that don't need to be part of the image                                                                                                                                                                                                                     
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+COPY ./server/dist/ ./
+COPY ./app/dist/ ./public
+
+EXPOSE 3000                                                                                                                                                                                                                                                                         
+
+CMD [ "node", "server.js" ]
