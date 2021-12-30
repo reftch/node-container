@@ -45,6 +45,9 @@ dev:
 		${APP_NAME}:${TAG} \
 		-c "cd /app/${APP_DIR} && pnpm $(filter-out $@,$(MAKECMDGOALS))" 
 
+dev-stop:
+	${DOCKER} container stop ${APP_NAME}
+
 prod:
 	${DOCKER} container run \
 		--name ${APP_NAME}-dev \

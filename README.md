@@ -1,19 +1,19 @@
-# Vite.js environment in OCI container
+# Developing Node.js application in local  OCI container
 
 All you need for build and run this application to have is [Podman](https://podman.io/) or [Docker](https://www.docker.com/) installed on your computer. All necessary libraries, tools will be installed in your OCI containers on their own way.
 
 ## Quick start
 
-1. Clone `git` repository or download the `vitejs-app-dev` repository.
+1. Clone `git` repository or download the `node-container` repository.
 
 ```
-git clone git@github.com:reftch/vitejs-app-dev.git
+git clone git@github.com:reftch/node-container.git
 ```  
 
 2. Change current directory:
 
 ```
-cd vitejs-app-dev
+cd node-container
 ````
 
 3. Init project environment and build container image for development.
@@ -29,7 +29,7 @@ cd vitejs-app-dev
 4. Start application in development container (located in the app/ dir):
 
   ```
-  make app start
+  make dev start
   ```
 
   ![Screenshot](./.config/images/app_start.png)
@@ -40,9 +40,9 @@ cd vitejs-app-dev
 
   5. Stop development container:
 
-  ````
-  make app stop
-  ````
+  ```
+  make dev-stop
+  ```
 
   6. Make production container:
 
