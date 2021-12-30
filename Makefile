@@ -5,7 +5,6 @@ TAG?=16-alpine
 PORT?=3000
 APP_DIR?=app
 SSR_DIR?=server
-SSR_NAME?=app-ssr
 
 .PHONY: clean init app prod prod-run
 
